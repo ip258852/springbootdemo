@@ -12,7 +12,7 @@ public class WSConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/demo").setAllowedOrigins("*").addInterceptors(new MyhandShake()).setHandshakeHandler(new MyHandler());
+        registry.addEndpoint("/demo").setAllowedOrigins("*").setHandshakeHandler(new MyHandler());
     }
 
     @Override
